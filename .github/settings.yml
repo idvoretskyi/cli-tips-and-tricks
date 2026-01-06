@@ -1,0 +1,170 @@
+# GitHub Repository Settings
+# This file is used by the GitHub Settings app (https://probot.github.io/apps/settings/)
+# to automatically configure repository settings via automation
+#
+# Install the app at: https://github.com/apps/settings
+# Documentation: https://github.com/repository-settings/app
+
+---
+# Repository settings
+repository:
+  name: cli-tips-and-tricks
+  description: A collection of useful command-line one-liners, scripts, and tips for Linux/Unix systems administration and development
+  homepage: https://github.com/idvoretskyi/cli-tips-and-tricks
+  topics:
+    - cli
+    - bash
+    - shell
+    - linux
+    - unix
+    - devops
+    - sysadmin
+    - kubernetes
+    - docker
+    - git
+    - tips-and-tricks
+    - cheatsheet
+
+  # Repository features
+  private: false
+  has_issues: true
+  has_projects: true
+  has_wiki: true
+  has_downloads: true
+
+  # Update default branch
+  default_branch: main
+
+  # Allow merge commits, squash merge, and rebase merge
+  allow_squash_merge: true
+  allow_merge_commit: true
+  allow_rebase_merge: true
+
+  # Automatically delete head branches after PR merge
+  delete_branch_on_merge: true
+
+  # Enable automated security fixes
+  enable_automated_security_fixes: true
+  enable_vulnerability_alerts: true
+
+# Labels configuration
+labels:
+  # Default labels
+  - name: bug
+    color: d73a4a
+    description: Something isn't working
+
+  - name: documentation
+    color: 0075ca
+    description: Improvements or additions to documentation
+
+  - name: duplicate
+    color: cfd3d7
+    description: This issue or pull request already exists
+
+  - name: enhancement
+    color: a2eeef
+    description: New feature or request
+
+  - name: good first issue
+    color: 7057ff
+    description: Good for newcomers
+
+  - name: help wanted
+    color: 008672
+    description: Extra attention is needed
+
+  - name: invalid
+    color: e4e669
+    description: This doesn't seem right
+
+  - name: question
+    color: d876e3
+    description: Further information is requested
+
+  - name: wontfix
+    color: ffffff
+    description: This will not be worked on
+
+  # Custom labels
+  - name: kubernetes
+    color: 326ce5
+    description: Kubernetes related tips and tricks
+
+  - name: docker
+    color: 2496ed
+    description: Docker related content
+
+  - name: security
+    color: ee0701
+    description: Security improvements or fixes
+
+  - name: automation
+    color: 1d76db
+    description: Automation scripts and workflows
+
+  - name: chore
+    color: fef2c0
+    description: Maintenance and housekeeping
+
+  - name: dependencies
+    color: 0366d6
+    description: Pull requests that update dependencies
+
+# Collaborators configuration
+# collaborators:
+#   - username: collaborator-username
+#     permission: push  # Options: pull, push, admin, maintain, triage
+
+# Branch protection rules
+branches:
+  - name: main
+    # Branch Protection Settings
+    protection:
+      # Require pull request reviews before merging
+      required_pull_request_reviews:
+        required_approving_review_count: 1
+        dismiss_stale_reviews: true
+        require_code_owner_reviews: false
+        dismissal_restrictions:
+          users: []
+          teams: []
+
+      # Require status checks to pass before merging
+      required_status_checks:
+        strict: true
+        contexts: []
+
+      # Enforce restrictions for admins
+      enforce_admins: false
+
+      # Restrictions on who can push to the branch
+      restrictions:
+        apps: []
+        users: []
+        teams: []
+
+      # Require conversation resolution before merging
+      required_conversation_resolution: true
+
+      # Require signed commits
+      required_signatures: false
+
+      # Allow force pushes
+      allow_force_pushes: false
+
+      # Allow deletions
+      allow_deletions: false
+
+# Milestones (optional)
+# milestones:
+#   - title: v1.0
+#     description: First major release
+#     state: open
+
+# GitHub Apps installed (optional)
+# teams:
+#   - name: core-team
+#     permission: admin
+#   - name: contributors
+#     permission: push
